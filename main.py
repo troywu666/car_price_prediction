@@ -4,7 +4,7 @@
 @Autor: Troy Wu
 @Date: 2020-05-22 14:45:05
 @LastEditors: Troy Wu
-@LastEditTime: 2020-06-24 16:40:34
+@LastEditTime: 2020-06-24 17:14:29
 '''
 from datetime import datetime
 
@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 import scipy.stats as st
 import seaborn as sns
-import shap
+# import shap
 from catboost import CatBoostRegressor
 from sklearn import linear_model
 from sklearn.ensemble import (AdaBoostRegressor, ExtraTreesRegressor,
@@ -65,7 +65,6 @@ def date_process(x):
     year = int(str(x)[:4])
     month = int(str(x)[4:6])
     day = int(str(x)[6:8])
-
     if month < 1:
         month = 1
     date = datetime(year, month, day)
